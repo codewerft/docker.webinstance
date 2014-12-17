@@ -6,7 +6,9 @@
 # DESCRIPTION: Container for continuous deployment of git-hosted static websites.
 # TO_BUILD:    docker build --rm --no-cache -t="codewerft/webinstance" .
 # TO_RUN:      docker run -p 127.0.0.1:5000:80 --name=mywebsite -d codewerft/webinstance -e WI_REPOSITORY==https://github.com/user/mywebsite.git -e WI_BRANCH=deploy -e WI_OAUTH=secret
-
+# 
+# Other useful flags: --restart=always
+#
 FROM ubuntu:14.04
 MAINTAINER Ole Weidner <ole.weidner@codewerft.com>
 
